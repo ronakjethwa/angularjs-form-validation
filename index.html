@@ -4,11 +4,17 @@
 <head>
     <!-- CSS ===================== -->
     <!-- load bootstrap -->
+    <title>AngularJS Form Validation</title>
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
     <style>
         body {
             padding-top: 30px;
         }
+
+        button{
+            margin: 10px auto;
+        }
+
     </style>
 
     <!-- JS ===================== -->
@@ -96,7 +102,7 @@
                 </div>
 
                 <!-- EMAIL -->
-                <div class="col-md-8 col-md-offset-2 form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+                <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
                     <label>Email</label>
                     <input type="email" name="email" class="form-control" ng-model="email" placeholder="name@domain.com" required>
                     <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
